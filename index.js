@@ -99,6 +99,9 @@ async function helloUser() {
         roomId = data.roomId;
         console.log(data.roomId+'방 입장');
       })
+      socket.on('error', (data) => {
+        console.log(data);
+      });
   }
 
 function init() {
